@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Foggyline\Slider\Api\Data\SlideInterface" type="Foggyline\Slider\Model\Slide"/>
+    <preference for="Foggyline\Slider\Api\Data\ImageInterface" type="Foggyline\Slider\Model\Image"/>
+    <preference for="Foggyline\Slider\Api\SlideRepositoryInterface" type="Foggyline\Slider\Model\SlideRepository"/>
+    <preference for="Foggyline\Slider\Api\ImageRepositoryInterface" type="Foggyline\Slider\Model\ImageRepository"/>
+</config>

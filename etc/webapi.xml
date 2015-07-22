@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <!-- Foggyline > Slider > Slide -->
+    <route url="/V1/foggylineSliderSlide/:slideId" method="GET">
+        <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Foggyline_Slider::slide"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderSlide/search" method="GET">
+        <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Foggyline_Slider::slide"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderSlide" method="POST">
+        <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Foggyline_Slider::slide_save"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderSlide/:id" method="PUT">
+        <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Foggyline_Slider::slide_save"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderSlide/:slideId" method="DELETE">
+        <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Foggyline_Slider::slide_delete"/>
+        </resources>
+    </route>
+    <!-- Foggyline > Slider > Image -->
+    <route url="/V1/foggylineSliderImage/:imageId" method="GET">
+        <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Foggyline_Slider::image"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderImage/search" method="GET">
+        <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Foggyline_Slider::image"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderImage" method="POST">
+        <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Foggyline_Slider::image_save"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderImage/:id" method="PUT">
+        <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Foggyline_Slider::image_save"/>
+        </resources>
+    </route>
+    <route url="/V1/foggylineSliderImage/:imageId" method="DELETE">
+        <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Foggyline_Slider::image_delete"/>
+        </resources>
+    </route>
+</routes>
