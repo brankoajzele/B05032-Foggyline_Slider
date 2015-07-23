@@ -12,7 +12,7 @@
     <route url="/V1/foggylineSliderSlide/search" method="GET">
         <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Foggyline_Slider::slide"/>
+            <resource ref="anonymous"/>
         </resources>
     </route>
     <route url="/V1/foggylineSliderSlide" method="POST">

@@ -123,12 +123,9 @@ class SlideRepository implements \Foggyline\Slider\Api\SlideRepositoryInterface
         $this->searchResultsFactory->setSearchCriteria($searchCriteria);
 
         $collection = $this->slideCollectionFactory->create();
+
         foreach ($searchCriteria->getFilterGroups() as $filterGroup) {
             foreach ($filterGroup->getFilters() as $filter) {
-                if ($filter->getField() === 'store_id') {
-                    $collection->addStoreFilter($filter->getValue(), false);
-                    continue;
-                }
                 $condition = $filter->getConditionType() ?: 'eq';
                 $collection->addFieldToFilter($filter->getField(), [$condition => $filter->getValue()]);
             }
