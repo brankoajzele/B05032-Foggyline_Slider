@@ -3,14 +3,12 @@
 namespace Foggyline\Slider\Api;
 
 /**
- * Image CRUD interface.
+ * @api
  */
 interface ImageRepositoryInterface
 {
     /**
      * Retrieve image entity.
-     *
-     * @api
      * @param int $imageId
      * @return \Foggyline\Slider\Api\Data\ImageInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException If image with the specified ID does not exist.
@@ -20,7 +18,6 @@ interface ImageRepositoryInterface
 
     /**
      * Save image.
-     *
      * @param \Foggyline\Slider\Api\Data\ImageInterface $image
      * @return \Foggyline\Slider\Api\Data\ImageInterface
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -29,10 +26,18 @@ interface ImageRepositoryInterface
 
     /**
      * Retrieve images matching the specified criteria.
-     *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return \Magento\Framework\Api\SearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria);
+
+    /**
+     * Delete slide by ID.
+     * @param int $slideId
+     * @return bool true on success
+     * @throws \Magento\Framework\Exception\NoSuchEntityException
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function deleteById($slideId);
 }

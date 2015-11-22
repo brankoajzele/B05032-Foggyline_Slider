@@ -3,7 +3,7 @@
 namespace Foggyline\Slider\Api\Data;
 
 /**
- * Slide interface.
+ * @api
  */
 interface SlideInterface
 {
@@ -13,16 +13,12 @@ interface SlideInterface
 
     /**
      * Get Slide entity 'slide_id' property value
-     *
-     * @api
      * @return int|null
      */
     public function getId();
 
     /**
      * Set Slide entity 'slide_id' property value
-     *
-     * @api
      * @param int $id
      * @return $this
      */
@@ -30,16 +26,12 @@ interface SlideInterface
 
     /**
      * Get Slide entity 'slide_id' property value
-     *
-     * @api
      * @return int|null
      */
     public function getSlideId();
 
     /**
      * Set Slide entity 'slide_id' property value
-     *
-     * @api
      * @param int $slideId
      * @return $this
      */
@@ -47,16 +39,12 @@ interface SlideInterface
 
     /**
      * Get Slide entity 'title' property value
-     *
-     * @api
      * @return string|null
      */
     public function getTitle();
 
     /**
      * Set Slide entity 'title' property value
-     *
-     * @api
      * @param string $title
      * @return $this
      */

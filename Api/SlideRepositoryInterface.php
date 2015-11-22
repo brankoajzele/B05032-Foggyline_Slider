@@ -3,14 +3,12 @@
 namespace Foggyline\Slider\Api;
 
 /**
- * Slide CRUD interface.
+ * @api
  */
 interface SlideRepositoryInterface
 {
     /**
      * Retrieve slide entity.
-     *
-     * @api
      * @param int $slideId
      * @return \Foggyline\Slider\Api\Data\SlideInterface
      * @throws \Magento\Framework\Exception\NoSuchEntityException If slide with the specified ID does not exist.
@@ -20,7 +18,6 @@ interface SlideRepositoryInterface
 
     /**
      * Save slide.
-     *
      * @param \Foggyline\Slider\Api\Data\SlideInterface $slide
      * @return \Foggyline\Slider\Api\Data\SlideInterface
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -29,7 +26,6 @@ interface SlideRepositoryInterface
 
     /**
      * Retrieve slides matching the specified criteria.
-     *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return \Magento\Framework\Api\SearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
@@ -38,7 +34,6 @@ interface SlideRepositoryInterface
 
     /**
      * Delete slide by ID.
-     *
      * @param int $slideId
      * @return bool true on success
      * @throws \Magento\Framework\Exception\NoSuchEntityException

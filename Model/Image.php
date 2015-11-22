@@ -13,7 +13,7 @@ class Image extends \Magento\Framework\Model\AbstractModel
     protected function _construct()
     {
         /* _init($resourceModel) */
-        $this->_init('Foggyline\Slider\Model\Resource\Image');
+        $this->_init('Foggyline\Slider\Model\ResourceModel\Image');
     }
 
     /**

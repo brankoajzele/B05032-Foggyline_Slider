@@ -12,7 +12,7 @@ use Magento\Framework\Reflection\DataObjectProcessor;
 class SlideRepository implements \Foggyline\Slider\Api\SlideRepositoryInterface
 {
     /**
-     * @var \Foggyline\Slider\Model\Resource\Slide
+     * @var \Foggyline\Slider\Model\ResourceModel\Slide
      */
     protected $resource;
 
@@ -22,7 +22,7 @@ class SlideRepository implements \Foggyline\Slider\Api\SlideRepositoryInterface
     protected $slideFactory;
 
     /**
-     * @var \Foggyline\Slider\Model\Resource\Slide\CollectionFactory
+     * @var \Foggyline\Slider\Model\ResourceModel\Slide\CollectionFactory
      */
     protected $slideCollectionFactory;
 
@@ -47,18 +47,18 @@ class SlideRepository implements \Foggyline\Slider\Api\SlideRepositoryInterface
     protected $dataSlideFactory;
 
     /**
-     * @param Resource\Slide $resource
+     * @param ResourceModel\Slide $resource
      * @param SlideFactory $slideFactory
-     * @param Resource\Slide\CollectionFactory $slideCollectionFactory
+     * @param ResourceModel\Slide\CollectionFactory $slideCollectionFactory
      * @param \Magento\Framework\Api\SearchResultsInterface $searchResultsFactory
      * @param DataObjectHelper $dataObjectHelper
      * @param DataObjectProcessor $dataObjectProcessor
      * @param \Foggyline\Slider\Api\Data\SlideInterfaceFactory $dataSlideFactory
      */
     public function __construct(
-        \Foggyline\Slider\Model\Resource\Slide $resource,
+        \Foggyline\Slider\Model\ResourceModel\Slide $resource,
         \Foggyline\Slider\Model\SlideFactory $slideFactory,
-        \Foggyline\Slider\Model\Resource\Slide\CollectionFactory $slideCollectionFactory,
+        \Foggyline\Slider\Model\ResourceModel\Slide\CollectionFactory $slideCollectionFactory,
         \Magento\Framework\Api\SearchResultsInterface $searchResultsFactory,
         \Magento\Framework\Api\DataObjectHelper $dataObjectHelper,
         \Magento\Framework\Reflection\DataObjectProcessor $dataObjectProcessor,

@@ -1,11 +1,11 @@
 <?php
 
-namespace Foggyline\Slider\Model\Resource;
+namespace Foggyline\Slider\Model\ResourceModel;
 
 /**
  * Foggyline Slide resource
  */
-class Slide extends \Magento\Framework\Model\Resource\Db\AbstractDb
+class Slide extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**
      * Define main table

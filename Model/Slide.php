@@ -13,7 +13,7 @@ class Slide extends \Magento\Framework\Model\AbstractModel
     protected function _construct()
     {
         /* _init($resourceModel) */
-        $this->_init('Foggyline\Slider\Model\Resource\Slide');
+        $this->_init('Foggyline\Slider\Model\ResourceModel\Slide');
     }
 
     /**
