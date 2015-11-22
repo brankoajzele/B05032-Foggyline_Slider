@@ -2,7 +2,6 @@
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
-
     <route url="/V1/foggylineSliderSlide/:slideId" method="GET">
         <service class="Foggyline\Slider\Api\SlideRepositoryInterface" method="getById"/>
         <resources>
@@ -33,7 +32,6 @@
             <resource ref="Foggyline_Slider::slide_delete"/>
         </resources>
     </route>
-
     <route url="/V1/foggylineSliderImage/:imageId" method="GET">
         <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="getById"/>
         <resources>
@@ -58,12 +56,10 @@
             <resource ref="Foggyline_Slider::image_save"/>
         </resources>
     </route>
-
     <route url="/V1/foggylineSliderImage/:imageId" method="DELETE">
         <service class="Foggyline\Slider\Api\ImageRepositoryInterface" method="deleteById"/>
         <resources>
             <resource ref="Foggyline_Slider::image_delete"/>
         </resources>
     </route>
-
 </routes>

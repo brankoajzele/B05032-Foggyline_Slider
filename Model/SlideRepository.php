@@ -136,7 +136,7 @@ class SlideRepository implements \Foggyline\Slider\Api\SlideRepositoryInterface
             foreach ($sortOrders as $sortOrder) {
                 $collection->addOrder(
                     $sortOrder->getField(),
-                    ($sortOrder->getDirection() == SearchCriteriaInterface::SORT_ASC) ? 'ASC' : 'DESC'
+                    (strtoupper($sortOrder->getDirection()) === 'ASC') ? 'ASC' : 'DESC'
                 );
             }
         }
